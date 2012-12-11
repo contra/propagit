@@ -1,5 +1,5 @@
 var upnode = require('upnode');
-var pushover = require('pushover');
+var pushover = require('pushover-f');
 var mkdirp = require('mkdirp');
 var spawn = require('child_process').spawn;
 
