@@ -1,5 +1,5 @@
 {
-    "name" : "propagit",
+    "name" : "propagit-f",
     "description" : "cascading multi-server git deployment",
     "version" : "0.6.4",
     "repository" : {
@@ -26,8 +26,8 @@
     },
     "dependencies" : {
         "optimist" : "~0.3.4",
-        "upnode" : "~0.3.1",
-        "pushover" : "~0.1.4",
+        "upnode" : "~0.4.3",
+        "pushover-f" : "~1.1.0",
         "mkdirp" : "~0.3.3"
     },
     "devDependencies" : {

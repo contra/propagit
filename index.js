@@ -112,6 +112,7 @@ Propagit.prototype.listen = function (controlPort, gitPort) {
     
     var repos = self.repos = pushover(self.repodir);
     repos.on('push', function (repo) {
+        repo.accept();
         self.emit('push', repo);
         self.drones.forEach(function (drone) {
             drone.fetch(repo, logger(drone.id));
