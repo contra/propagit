@@ -1,7 +1,7 @@
 {
     "name" : "propagit-f",
     "description" : "cascading multi-server git deployment",
-    "version" : "0.6.4",
+    "version" : "0.6.5",
     "repository" : {
         "type" : "git",
         "url" : "git://github.com/substack/propagit.git"
@@ -27,7 +27,7 @@
     "dependencies" : {
         "optimist" : "~0.3.4",
         "upnode" : "~0.4.3",
-        "pushover-f" : "~1.1.0",
+        "pushover-f" : "~1.1.1",
         "mkdirp" : "~0.3.3"
     },
     "devDependencies" : {
