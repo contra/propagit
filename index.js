@@ -39,6 +39,7 @@ function Propagit (opts) {
     this.repodir = path.resolve(opts.repodir || base + '/repos');
     this.deploydir = path.resolve(opts.deploydir || base + '/deploy');
     this.name = opts.name || (Math.random() * Math.pow(16,8)).toString(16);
+    this.keepOpen = opts.keepOpen;
     
     if (opts.hub) this.connect(opts.hub);
 }
@@ -110,7 +111,7 @@ Propagit.prototype.listen = function (controlPort, gitPort) {
         });
     };
     
-    var repos = self.repos = pushover(self.repodir);
+    var repos = self.repos = pushover(self.repodir, {keepOpen:self.keepOpen});
     repos.on('push', function (repo) {
         repo.accept();
         self.emit('push', repo);
