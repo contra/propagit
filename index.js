@@ -293,9 +293,7 @@ Propagit.prototype.drone = function (fn) {
     function refs (repo) {
         return {
             origin : (self.gitUri + '/' + repo)
-                .replace(/(\.git)*$/, '.git')
-            ,
-        }
+        };
     }
     self.on('error', self.emit.bind(self, 'error'));
     
