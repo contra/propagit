@@ -257,7 +257,7 @@ Propagit.prototype.createService = function (remote, conn) {
                     return '-' + (parseInt(x || '0', 10) + 1);
                 });
             }
-            
+            obj.address = conn.stream.address();
             self.drones.push(obj);
             
             conn.on('end', function () {
