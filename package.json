@@ -1,7 +1,7 @@
 {
     "name" : "propagit-f",
     "description" : "cascading multi-server git deployment",
-    "version" : "0.6.10",
+    "version" : "0.6.11",
     "repository" : {
         "type" : "git",
         "url" : "git://github.com/substack/propagit.git"

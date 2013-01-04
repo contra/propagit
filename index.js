@@ -159,7 +159,12 @@ Propagit.prototype.createService = function (remote, conn) {
         if (typeof cb !== 'function') return;
         cb(self.drones.map(function (d) { return d.id; }));
     };
-    
+
+    service.getDrones = function (opts, cb) {
+        var drones = self.getDrones(opts);
+        cb(drones);
+    };
+
     service.ps = function (emit) {
         var drones = self.drones;
         var pending = drones.length;
@@ -285,7 +290,7 @@ Propagit.prototype.createService = function (remote, conn) {
     service.subscribe = function(emit) {
         if (typeof emit === 'function') {
           conn.once('end', function() {
-            delete subs[conn.id];
+            delete self.subs[conn.id];
           });
           self.subs[conn.id] = emit;
           emit('ready');
